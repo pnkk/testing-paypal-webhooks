@@ -22,9 +22,12 @@ app.get('/*', (req, res) => {
     console.log('PAYPAL-AUTH-ALGO', req.header('PAYPAL-AUTH-ALGO'));
     console.log('PAYPAL-CERT-URL', req.header('PAYPAL-CERT-URL'));
 
-    res.send("POST request to the homepage \n")
+    res.send("POST request to the homepage \n");
   })
   .listen(PORT, (error) => {
-    if (error) throw error;
+    if (error) {
+      console.log('!!! ERROR: ', error);
+      throw error;
+    };
     console.log(`Express server listening on port ${PORT}`);
   });
