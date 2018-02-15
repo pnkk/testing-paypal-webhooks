@@ -3,8 +3,6 @@ const bodyParser = require('body-parser');
 
 const PORT = 6969;
 
-const serveIndex = (req, res) => res.sendFile('./index.html');
-
 const app = express();
 
 app.use(bodyParser.json()); // for parsing application/json
