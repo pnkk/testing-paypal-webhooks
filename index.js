@@ -8,10 +8,11 @@ const app = express();
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
-app.get('/*', (req, res) => {
+app
+  .get('/', (req, res) => {
     res.send("HELLO WORLD get received \n");
   })
-  .post('/*', function (req, res) {
+  .post('/', function (req, res) {
     console.log('!!! request body');
     console.log(JSON.stringify(req.body, null, 2));
 
