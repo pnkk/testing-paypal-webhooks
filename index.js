@@ -25,10 +25,10 @@ app
 
     res.send("POST request to the homepage \n");
   })
-  .listen(PORT, (error) => {
+  .listen(process.env.PORT || PORT, (error) => {
     if (error) {
       console.log('!!! ERROR: ', error);
       return error;
     };
-    console.log(`Express server listening on port ${PORT}`);
+    console.log(`Express server listening on port ${process.env.PORT || PORT}`);
   });
