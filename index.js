@@ -14,7 +14,7 @@ app
     res.sendFile(path.join(__dirname + '/button.html'));
   })
   .post('/', function (req, res) {
-    console.log('METHOD:', console.log(req.method));
+    console.log('METHOD:', req.method);
     console.log("\nHEADERS:");
     console.log('content-type', req.header('content-type'));
     console.log('PAYPAL-TRANSMISSION-SIG', req.header('PAYPAL-TRANSMISSION-SIG'));
